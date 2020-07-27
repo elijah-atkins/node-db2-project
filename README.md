@@ -6,11 +6,11 @@ In this challenge, you will write an API that can be used to manage _Cars_ store
 
 Follow these steps for starting your project.
 
-- [ ] Fork this repository into your account and **clone your version**.
+- [x] Fork this repository into your account and **clone your version**.
 - [ ] Add your _Team Lead_ as collaborator on your repository.
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
@@ -37,3 +37,18 @@ The client for this API is a car dealer who has provided the following specs:
 - Add seed data to the database using `knex seeds`
 - Add `UPDATE` and `DELETE` operations to your API.
 - Write a schema file for a `sales` table. This table should track information on the sale of each car. You may wish to research `foreign keys` in order to link each sale to the entry in `cars` which sold.
+
+
+CREATE TABLE cars (
+    carID        INTEGER    PRIMARY KEY AUTOINCREMENT,
+    VIN          TEXT (256) NOT NULL
+                            UNIQUE,
+    make         TEXT (64)  NOT NULL,
+    model        TEXT (64)  NOT NULL,
+    year         INTEGER    NOT NULL
+                            CHECK (year > 1900 AND 
+                                   year < 3000),
+    milage       INTEGER    NOT NULL,
+    transmission TEXT (64),
+    title        TEXT (64) 
+);
