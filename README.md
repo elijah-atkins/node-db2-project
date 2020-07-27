@@ -40,7 +40,7 @@ The client for this API is a car dealer who has provided the following specs:
 
 
 CREATE TABLE cars (
-    carID        INTEGER    PRIMARY KEY AUTOINCREMENT,
+    id           INTEGER    PRIMARY KEY AUTOINCREMENT,
     VIN          TEXT (256) NOT NULL
                             UNIQUE,
     make         TEXT (64)  NOT NULL,
