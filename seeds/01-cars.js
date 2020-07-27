@@ -5,10 +5,10 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('cars').insert([
-        {VIN: '1x789', make: 'toyota', model: 'corolla', year: 1999, milage: 511500, transmission: "automatic"},
-        {VIN: '1x7x89', make: 'ford', model: '4runner', year: 2014, milage: 102350, transmission: "automatic"},
-        {VIN: '1x78re9', make: 'honda', model: 'outback', year: 2003, milage: 1035230, transmission: "automatic"},
-        {VIN: '1x78w9', make: 'toyota', model: '4runner', year: 1995, milage: 15200, transmission: "manual", title: "clean"},
+        {VIN: '1x782659', make: 'toyota', model: 'corolla', year: 1999, milage: 511500, transmission: "automatic", title: "salvage"},
+        {VIN: '1x7x6389', make: 'ford', model: '4runner', year: 2014, milage: 102350, transmission: "automatic"},
+        {VIN: '1x78r5e9', make: 'honda', model: 'outback', year: 2003, milage: 1035230, transmission: "automatic"},
+        {VIN: '1x78w549', make: 'toyota', model: '4runner', year: 1995, milage: 15200, transmission: "manual", title: "clean"},
       ]);
     });
 };
