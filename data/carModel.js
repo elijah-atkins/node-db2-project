@@ -15,9 +15,9 @@ function get(id) {
     return query
       .where('id', id)
       .first()
-      .then((action) => {
-        if (action) {
-          return mappers.carToBody(action);
+      .then((car) => {
+        if (car) {
+          return mappers.carToBody(car);
         } else {
           return null;
         }

@@ -68,8 +68,9 @@ router.get("/", async (req, res, next) => {
   function validateCarsBody(req, res, next) {
     if (Object.keys(req.body).length === 0) {
       res.status(400).json({ error: "Please provide a Cars body" });
-    } else if (!req.body.name || !req.body.budget) {
-      res.status(400).json({ error: "Please provide a VIN make model year and milage" });
+      //look for required fields 
+    } else if (!req.body.VIN || !req.body.make || !req.body.model || !req.body.year || !req.body.milage) {
+      res.status(400).json({ error: "Please provide a VIN, make, model, year, and milage"});
     } else {
       next();
     }

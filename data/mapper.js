@@ -15,13 +15,12 @@ module.exports = {
   function carToBody(project) {
     const result = {
       ...project,
-      completed: intToBoolean(project.completed),
+
     };
   
     if (project.actions) {
       result.actions = project.actions.map(action => ({
         ...action,
-        completed: intToBoolean(action.completed),
       }));
     }
   
